@@ -1,0 +1,133 @@
+#header-iletisim {
+  width: 100%;
+  min-height: 25rem;
+  background-image: url("../images/iletisimbanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(0.9);
+  .container {
+    max-width: $container;
+    height: inherit;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      letter-spacing: 1.3rem;
+      color: white;
+      font-size: 5.6rem;
+      font-weight: 400;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      li {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      li+li::before {
+        content: ">>";
+        margin: 0 .8rem;
+        font-size: 15px;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+#iletisim-bilgileri {
+  margin: 10rem 0;
+  h1 {
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 3.6rem;
+  }
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px 20px;
+    .iletisim-item {
+      width: 380px;
+      height: 330px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 10px;
+      background-color: white;
+      color: black;
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      perspective: 1000px;
+      i {
+        font-size: 6rem;
+        transition: all 0.5s ease;
+      }
+      h2 {
+        font-size: 2.7rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+      a {
+        color: white;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        background: $main-background-color;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      a:hover {
+        animation-name: img-hover;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: backwards;
+        filter: drop-shadow(0 1rem 1px rgba(0, 0, 0, 0.33));
+        background-color: rgba(49, 54, 91, 0.9);
+        @keyframes img-hover {
+          0%{transform: translate(0, 0)}
+          50%{transform: translate(0, -7px)}
+          100%{transform: translate(0, 0px)}
+        }
+      }
+    }
+    .iletisim-item:hover i{
+      transform: rotateY(360deg);
+      color: $logo-main-color;
+    }
+  }
+}
+#harita {
+  margin-bottom: 10rem;
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 2rem;
+    iframe {
+      width: 100%;
+      height: 500px;
+    }
+  }
+}
+@media screen and (max-width: 1298px) {
+  #iletisim-bilgileri {
+    .container {
+      justify-content: center;
+    }
+  }
+}

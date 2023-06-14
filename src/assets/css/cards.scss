@@ -1,0 +1,134 @@
+article {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 5rem 0;
+
+  .container {
+    max-width: $container;
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 20px;
+
+    .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 400px;
+      height: 320px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.5s;
+
+      .imgBox {
+        position: absolute;
+        top: 20px;
+        width: 210px;
+        height: 210px;
+        border-radius: 12px;
+        transition: 0.5s;
+
+        lottie-player {
+          filter: drop-shadow(1px 1px 5px black);
+        }
+      }
+
+      .content {
+        position: absolute;
+        top: 252px;
+        width: 100%;
+        height: 35px;
+        overflow: hidden;
+        padding: 0 30px;
+        text-align: center;
+        transition: 0.5s;
+
+        h2 {
+          font-size: 2.5em;
+          font-weight: 700;
+          color: #fc6c91;
+        }
+
+        p {
+          font-size: 1.5rem;
+          color: #333;
+        }
+
+        a {
+          text-decoration: none;
+          position: relative;
+          font-size: 1.5rem;
+          top: 18px;
+          display: inline-block;
+          padding: 12px 15px;
+          border-radius: 8px;
+          font-weight: bold;
+          color: white;
+          transition: 0.3s;
+        }
+
+        .link1 {
+          background-color: #fc6c91;
+          border: 1px solid #fc6c91;
+        }
+
+        .link1:hover {
+          color: #fc6c91;
+          background-color: transparent;
+        }
+
+        .link2 {
+          background-color: #3d53ff;
+          border: 1px solid #3d53ff;
+        }
+
+        .link2:hover {
+          color: #3d53ff;
+          background-color: transparent;
+        }
+
+        .link3 {
+          background-color: #38d200;
+          border: 1px solid #38d200;
+        }
+
+        .link3:hover {
+          color: #38d200;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .card:hover {
+      height: 400px;
+
+      .imgBox {
+        top: -100px;
+        scale: 0.8;
+      }
+
+      .content {
+        top: 130px;
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1295px) {
+  article {
+    .container {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 100px 20px;
+    }
+  }
+}
