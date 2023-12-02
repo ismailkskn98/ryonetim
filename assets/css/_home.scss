@@ -1,0 +1,332 @@
+#ilk-bilgilendirme {
+  margin-top: 2rem;
+  width: 100%;
+
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) repeat(2, minmax(240px, 1fr)) minmax(240px, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "vizyon kurumsal kurumsal misyon"
+    ;
+    gap: 20px 20px;
+    justify-content: center;
+    align-content: center;
+
+    .vizyon,
+    .kurumsal,
+    .misyon {
+      padding: 5rem 2rem;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 4px 4px 0 #00486B;
+
+      h1 {
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      h2 {
+        font-weight: 500;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        opacity: 0.9;
+      }
+
+      p {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        line-height: 3rem;
+        opacity: 0.9;
+      }
+    }
+
+    .vizyon {
+      grid-area: vizyon;
+      background-color: $main-background-color;
+
+      p {
+        margin-top: 1rem;
+      }
+    }
+
+    .kurumsal {
+      grid-area: kurumsal;
+      background-color: $logo-main-color;
+      background-image: url("/images/bg-pattern-quotation.svg");
+      background-repeat: no-repeat;
+      background-position: top 15px right 100px;
+    }
+
+    .misyon {
+      grid-area: misyon;
+      background-color: $main-background-color;
+
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+#baypayo-kimdir {
+  width: 100%;
+  height: auto;
+  margin-bottom: 4rem;
+
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    img {
+      max-width: 50%;
+      object-fit: scale-down;
+    }
+
+    .baypayo-hakkimda {
+      max-width: 50%;
+      min-height: 100%;
+      margin-top: 1.5rem;
+      padding-right: 3rem;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+
+      h1::before {
+        content: ">";
+        color: darkred;
+        font-size: 3rem;
+        margin: 0 1rem;
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        line-height: 3rem;
+      }
+
+      a {
+        display: inline-block;
+        padding: 1rem 3rem;
+        color: black;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        align-self: flex-start;
+        background-color: $main-background-color;
+        border: 1px solid $main-background-color;
+        color: white;
+        border-radius: 5px;
+        transition: all .3s ease-in-out;
+      }
+
+      a:hover {
+        background-color: transparent;
+        color: $main-background-color;
+      }
+    }
+  }
+}
+
+#son-bilgilendirme {
+  width: 100%;
+  max-height: 30rem;
+  padding: 3rem 0;
+  background-image: url("/images/section-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  filter: brightness(0.5);
+  filter: saturate(-2);
+  filter: sepia(.7);
+  transition: filter 0.5s ease-in-out;
+
+  .container {
+    max-width: $container;
+    max-height: inherit;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(auto, 800px));
+    grid-template-rows: repeat(3, minmax(auto, 50px));
+    grid-template-areas:
+      "h1"
+      "h2"
+      "paragraf"
+    ;
+    row-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+    letter-spacing: .3rem;
+
+    h1 {
+      grid-area: h1;
+    }
+
+    h2 {
+      grid-area: h2;
+    }
+
+    p {
+      grid-area: paragraf;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+#son-bilgilendirme:hover {
+  filter: sepia(.9);
+}
+
+#yonetim {
+  width: 100%;
+  min-height: 570px;
+  margin: 3rem 0;
+
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px 100px;
+
+    img {
+      max-width: 50%;
+    }
+
+    .yonetim-bilgi {
+      max-width: 40%;
+      min-height: inherit;
+      margin: auto 0;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+
+      ul {
+        margin-top: 3rem;
+        padding-left: 1.5rem;
+        list-style-type: inherit;
+        font-size: 1.4rem;
+        font-weight: bold;
+
+        li {
+          margin-bottom: 1rem;
+          padding-left: 1.5rem;
+        }
+
+        li::marker {
+          content: ' > ';
+          font-size: 1.7rem;
+          font-weight: 800;
+          color: #d20000;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// mobil
+@media screen and (max-width: 1054px) {
+  #ilk-bilgilendirme {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "kurumsal kurumsal"
+        "vizyon misyon"
+      ;
+    }
+  }
+
+  #baypayo-kimdir {
+    .container {
+      img {
+        max-width: 100%;
+        order: -1;
+      }
+
+      .baypayo-hakkimda {
+        max-width: 100%;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  #yonetim {
+    .container {
+      justify-content: center;
+
+      img {
+        max-width: 90%;
+      }
+
+      .yonetim-bilgi {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #son-bilgilendirme {
+    max-height: 50rem;
+
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "h1 h1"
+        "h2 h2"
+        "paragraf paragraf"
+      ;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #ilk-bilgilendirme {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "kurumsal kurumsal"
+        "vizyon vizyon"
+        "misyon misyon"
+      ;
+    }
+  }
+}

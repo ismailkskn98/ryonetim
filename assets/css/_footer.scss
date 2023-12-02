@@ -1,0 +1,289 @@
+footer {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  padding: 2rem 0;
+  background-color: white;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+  .container {
+    max-width: $container;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(290px, auto));
+      grid-template-areas:
+        "kurumsal hizmetler navbar iletisim"
+      ;
+      border-bottom: 1px solid #dbdbdb;
+      padding-bottom: 5rem;
+
+      .content-item {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          padding-left: 1.5rem;
+        }
+
+        a {
+          font-size: 1.3rem;
+          display: inline-block;
+          padding: 1rem 0;
+          color: black;
+          text-transform: capitalize;
+          column-gap: 1rem;
+        }
+      }
+
+      .kurumsal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: kurumsal;
+
+        img {
+          max-width: 40rem;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          margin-top: 1rem;
+          font-size: 1.3rem;
+          margin-bottom: .9rem !important;
+          font-weight: bold;
+          margin: 0 .8rem;
+        }
+
+        p:last-child {
+          font-size: 1.2rem;
+          opacity: 0.8;
+        }
+      }
+
+      .hizmetler {
+        grid-area: hizmetler;
+        align-items: center;
+
+        .hizmetler-item {
+          display: flex;
+          align-items: center;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .hizmetler-item:hover {
+          transform: translate(3px, 0);
+          color: $logo-auxiliary-color;
+          filter: drop-shadow(0 8px 6px grey);
+        }
+
+        .hizmetler-item::before {
+          content: '>';
+          font-size: 1.5rem;
+          transform: scale(0, 0);
+          transition: all 0.3s ease-in-out;
+        }
+
+        .hizmetler-item:hover::before {
+          transform: scale(1, 1);
+        }
+      }
+
+      .navbar {
+        grid-area: navbar;
+        align-items: center;
+
+        .footer-nav-item {
+          display: flex;
+          align-items: center;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .footer-nav-item:hover {
+          transform: translate(3px, 0);
+          color: $logo-auxiliary-color;
+          filter: drop-shadow(0 8px 6px grey);
+        }
+
+        .footer-nav-item::before {
+          content: '>';
+          font-size: 1.5rem;
+          transform: scale(0, 0);
+          transition: all 0.3s ease-in-out;
+        }
+
+        .footer-nav-item:hover::before {
+          transform: scale(1, 1);
+        }
+      }
+
+      .iletisim {
+        grid-area: iletisim;
+        align-items: center;
+
+        h2 {
+          padding: 0 !important;
+        }
+
+        h4 {
+          font-size: 1.3rem;
+          margin-top: 1rem;
+          margin-bottom: 4rem;
+          filter: drop-shadow(3px 8px 10px black);
+        }
+
+        a {
+          text-transform: none !important;
+        }
+
+        .iletisim-no {
+          display: inline-block;
+          padding: 1rem 2rem;
+          margin-bottom: 4rem;
+          border-radius: 50px;
+          color: white;
+          font-weight: 600;
+          letter-spacing: 1px;
+          background-color: #f3a41a;
+          border: 1px solid #f3a41a;
+          filter: drop-shadow(0 10px 7px #f3a41a);
+          transition: all .5s ease;
+        }
+
+        .iletisim-no:hover {
+          background-color: transparent;
+          border: 1px solid #f3a41a;
+          color: #f3a41a;
+        }
+
+        .iletisim-mail {
+          display: inline-block;
+          padding: 1rem 2rem;
+          border-radius: 50px;
+          color: white;
+          font-weight: 600;
+          letter-spacing: 1px;
+          background-color: $logo-main-color;
+          border: 1px solid $logo-main-color;
+          filter: drop-shadow(0 10px 7px $logo-main-color);
+          transition: all .5s ease;
+        }
+
+        .iletisim-mail:hover {
+          background-color: transparent;
+          border: 1px solid $logo-main-color;
+          color: $logo-main-color;
+        }
+      }
+    }
+
+    .bottom-footer {
+      width: 100%;
+      padding: 0 2rem;
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+
+      .copyright {
+        font-size: 1.3rem;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-left: 1rem;
+          width: 20px;
+          max-height: 20px;
+        }
+      }
+
+      .social-media {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        perspective: 500px;
+
+        i {
+          display: inline-block;
+          padding: .3rem;
+          font-size: 2rem;
+          cursor: pointer;
+          transition: all 0.5s ease;
+        }
+
+        i:hover.fa-instagram {
+          color: #E1306C;
+        }
+
+        i:hover.fa-facebook {
+          color: #4267B2;
+        }
+
+        i:hover.fa-twitter {
+          color: #1DA1F2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1324px) {
+  footer {
+    .container {
+      .content {
+        grid-row-gap: 5rem;
+        grid-template-columns: repeat(2, minmax(290px, auto));
+        grid-template-areas:
+          "kurumsal kurumsal"
+          "iletisim navbar"
+          "hizmetler hizmetler"
+        ;
+
+        .content-item {
+          align-items: center;
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    .container {
+      .content {
+        grid-row-gap: 5rem;
+        grid-template-columns: repeat(1, minmax(auto, 390px));
+        grid-template-areas:
+          "kurumsal"
+          "hizmetler"
+          "navbar"
+          "iletisim"
+        ;
+
+        .content-item {
+          align-items: flex-start;
+        }
+
+        .kurumsal {
+          img {
+            max-width: 30rem;
+          }
+        }
+      }
+    }
+  }
+}

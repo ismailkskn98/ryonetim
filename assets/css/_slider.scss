@@ -1,0 +1,139 @@
+main {
+  position: relative;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+  .swiper {
+    min-width: 100%;
+
+    .swiper-wrapper {
+      min-width: inherit;
+      max-height: inherit;
+
+      .swiper-slide {
+        min-width: inherit;
+        max-height: inherit;
+
+        figure {
+          margin: 0;
+          position: relative;
+          overflow: hidden;
+
+          figcaption {
+            position: absolute;
+            max-width: 780px;
+            padding: 2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            opacity: 0;
+            border-radius: 5px;
+            color: white;
+            background-color: rgba(0, 0, 0, .3);
+            transition: all .3s ease-in-out;
+
+            h2 {
+              font-size: 6rem;
+            }
+
+            p {
+              font-size: 2rem;
+              line-height: 4rem;
+              letter-spacing: 1.2px;
+            }
+
+            a {
+              display: block;
+              margin: 1.5rem 0;
+              max-width: 15rem;
+              padding: 1rem 2rem;
+              color: white;
+              font-size: 1.6rem;
+              background-color: $logo-main-color;
+              border-radius: 3px;
+              transition: all .5s ease-in-out;
+
+              &:hover {
+                background-color: #59177c;
+              }
+            }
+          }
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: 70rem;
+          object-fit: cover;
+        }
+      }
+
+      .swiper-slide-active {
+        figure {
+          figcaption {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background-color: black;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #7d21ae;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #7d21ae !important;
+      transition: all .2s ease-in-out;
+
+      &::after {
+        font-size: 3rem !important;
+      }
+
+      &:hover {
+        color: #531775 !important;
+      }
+    }
+  }
+
+}
+
+// mobil slider
+
+@media screen and (max-width: 800px) {
+  main {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          figure {
+            img {
+              height: 60rem;
+            }
+
+            figcaption {
+              width: 34rem;
+
+              h2 {
+                font-size: 3rem;
+              }
+
+              p {
+                font-size: 2rem;
+                line-height: 2.8rem;
+                letter-spacing: 1.4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

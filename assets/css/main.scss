@@ -1,0 +1,17 @@
+html {
+  overflow-x: initial !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+
+@import 'variables', 'reset', 'navbar', 'footer', 'slider', 'cards', 'home', 'hizmetlerSidebar', 'hizmetler', 'kurumsal', 'iletisim';
+
+.active {
+  color: $logo-auxiliary-color !important;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.58));
+}
